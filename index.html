@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>موقع للمساعدات الانسانية</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel-rtl/"
+    />
+    <script src="assets/js/color-modes.js"></script>
+    <link href="assets/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="assets/rtl/carousel.rtl.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+    </svg>
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">شرائح العرض</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="تبديل التنقل"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >الصفحة الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#donate">نموذج التبرع</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#table">جدول المساعدات</a>
+              </li>
+              
+            </ul>
+            <img src="images/logo.png" width="50px"/>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>عملية الفارس الشهم 3 - قطاع غزة</h1>
+                <p class="opacity-75">
+                  عملية #الفارس_الشهم3 ترعى بطولة غزة الرمضانية التي تنظمها الجمعية الفلسطينية لقدامى الرياضيين، بمشاركة 20 فريقًا من مختلف محافظات قطاع غزة.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="https://www.facebook.com/alfaresalshahm3">عرض التفاصيل</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>جمعية الفجر الشبابي- لجنة المواصي</h1>
+                <p>
+                  نود اعلامكم ان هذه الصفحة مخصصة فقط لسكان المنطقة المحصورة بين جامع القبة ومدرسة جرار جنوبا وحتى طبريا وفيلا ابوعقلين شمالا ومن شارع أصداء شرقا حتى البحر غربا .
+الرجاء من يسكن خارج هذا النطاق مراعاة اننا لانستطيع افادته لأننا متطوعون من سكان المنطقة المذكورة ولسنا موظفين في الجمعية .
+هنا رابط تقديم الشكاوي ان اردتموه 
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="https://reg.fajeryouth.org/complaint?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExMm5QWHpVeHlUajNPTmo0M3NydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4DtbqJhrEC573g9XrpsQliR3XEb2zJNmGPpAtUnl5R2qaNkEnJxqZBmW6zgA_aem_MuTJxgQblLQ8o7lxWh8H7g">تقديم شكوى</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              aria-hidden="true"
+              class="bd-placeholder-img"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Anera</h1>
+                <p>
+                 Families Need Your Help to Stay Warm and Dry this Winter
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="https://support.anera.org/a/donate">DONATE NOW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">السابق</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">التالي</span>
+        </button>
+      </div>
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/fares.jpg" class="bd-placeholder-img rounded-circle" width = 150px/>
+            <h2 class="fw-normal">الفارس الشهم توزيع طرود</h2>
+            <p>
+              عملية #الفارس_الشهم3 توزع طرودًا غذائية على 3000 أسرة نازحة في مخيم جباليا ضمن جهودها الإغاثية في شمال غزة.
+            </p>
+            <p><a class="btn btn-secondary" href="https://www.facebook.com/reel/1374755114384541/?__cft__[0]=AZbCaj_2XLDEYvUP_qsXNCxZUNAh8bJojzilJHyzh47su3i63v1kAc2OLNPs1B4HAkvpea2MUiGUCe1vH6c5ruYehE5dK2Ow-t3Q6BrWTSdQPRUQDvDUxFShoWWbHougyHjr0tFz3E38fX8e0bnTUpya-P0mXW-zcORWbHxERm3tqVwyfCP8PSPBCFfXgumaUGkvFAEz7baI6FbolUbsWt_o&__tn__=%2CO%2CP-R">عرض التفاصيل</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/fajr.jpg" class="bd-placeholder-img rounded-circle" width = 150px/>
+            <h2 class="fw-normal">تحديث بيانات الفجر الشبابي</h2>
+            <p>
+            تعمل الجمعية حالياً ضمن خطة طوارئ حيث تم العمل ضمن هذه الخطة من تاريخ 09/10/2023م, تستهدف الجمعية النازحين بمحافظات قطاع غزة وتقدم المساعدات للمواطنين والنازحين ضمن مشاريع متنوعة.
+
+وانطلاقاً من واجب الجمعية و حرصها على تقديم خدماتها لأبناء شعبنا الصامد قامت بإعداد نظام تسجيل للوصول السريع لكافة المواطنين و استهدافهم في خطة العمل الإغاثية الحالية.  
+تم تحديث رابط التسجيل للوصول إليه اضغط على الزر أدناه
+
+
+</p>
+            <p><a class="btn btn-secondary" href="https://fajeryouth.paltechsolutions.net/">الذهاب لرابط التسجيل المحدث</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/anera.jpg" class="bd-placeholder-img rounded-circle" width = 150px/>
+            <h2 class="fw-normal">إستعدادات أنيرا لشهر رمضان</h2>
+            <p>
+             أنيرا تواصل بذل أقصى جهودها لمساعدة الناس في غزة.
+إليكم لمحة عن عملنا في غزة خلال الشهر الماضي.
+            </p>
+            <p><a class="btn btn-secondary" href="https://www.facebook.com/AneraArabic/posts/pfbid02qE9GmWmgpTJ1Siu2c3yqcK8aDR4ktYKACFGzcoEyUAL5fdRXsc1gM2y6YxQXM2nhl?__cft__[0]=AZbjQomETYrx35VgPnfdc1Jl3JccGglC8TM21Xlce0tP5bxVsn3sJZnysvs532im8fGJ-w4yuySPueI3momOTev_q6qFPxtO8kBJLntzJxMvW1BFvi8S5eFiI0NHfNJIHupSmt5jzEME9M9cSy9FvfHvcx2gMPkp1H5Dj4YaKufPRsAyon8Tf_xS4L1AaJkLEww&__tn__=%2CO%2CP-R">شاهد التفاصيل</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+        <!-- START THE FEATURETTES -->
+       
+        <span id="table"></span>
+        <hr class="featurette-divider" />
+        <div class="row featurette" id="table-container-string"></div>
+        <div class="bd-example-snippet bd-code-snippet">
+              <div class="bd-example m-0 border-0">
+                <nav aria-label="مثال قياسي لترقيم الصفحات">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="السابق">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="التالي">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+        <script src="script-string.js"></script>
+        <hr class="featurette-divider" id="donate"/>
+        <div class="row featurette">
+          <div class="col-md-5">
+            <h2 class="featurette-heading fw-normal lh-1">
+              تبرعك يساهم في تحسين جودة حياة النازحين
+            </h2>
+            <br/>
+           <p class="lead">تُعد التبرعات الشهرية أفضل طريقة لدعم برامجنا الأساسية ومساعدتنا على الاستجابة بسرعة في أوقات الأزمات.
+          تُعد التبرعات الشهرية أفضل طريقة لدعم برامجنا الأساسية ومساعدتنا على الاستجابة بسرعة في أوقات الأزمات.
+        </p>
+
+          </div>
+          <div class="col-md-7">
+            <h4>تبرعك يساهم في تحسين وضع النازحين في المخيمات وتوفير لهم المستلزمات والحياة الكريمة</h4>
+            <p>تُعد التبرعات الشهرية أفضل طريقة لدعم برامجنا الأساسية ومساعدتنا على الاستجابة بسرعة في أوقات الأزمات.</p>
+            <form method="post" action="a.php">
+              <fieldset class="mb-3">
+                    <legend>معلومات التبرع</legend>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        name="radios"
+                        class="form-check-input"
+                        id="exampleRadio1"
+                        checked
+                      />
+                      <label class="form-check-label" for="exampleRadio1"
+                        >شهري</label
+                      >
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input
+                        type="radio"
+                        name="radios"
+                        class="form-check-input"
+                        id="exampleRadio2"
+                      />
+                      <label class="form-check-label" for="exampleRadio2"
+                        >لمرة واحدة</label
+                      >
+                    </div>
+                    <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    >أنا اسمي</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="فلان الفلاني"
+                    aria-label="الاسم"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+                  </fieldset>
+                  <div class="input-group mb-3">
+                  <span class="input-group-text"
+                    ><bdo lang="en" dir="ltr">.00</bdo></span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="المبلغ (لأقرب دولار)"
+                  />
+                  <span class="input-group-text">$</span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">البريد الالكتروني</label>
+                  </div>
+                  <div class="input-group">
+                  <span class="input-group-text">تفاصيل</span>
+                  <textarea
+                    class="form-control"
+                    aria-label="مع textarea"
+                  ></textarea>
+                </div>
+                <br/>
+                 <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input is-invalid"
+                        type="checkbox"
+                        value=""
+                        id="invalidCheck3"
+                        required
+                      />
+                      <label class="form-check-label" for="invalidCheck3">
+                        أوافق على الشروط والأحكام
+                      </label>
+                      <div class="invalid-feedback">
+                        تجب الموافقة قبل إرسال النموذج.
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">
+                      إرسال النموذج
+                    </button>
+                  </div>
+                 
+            </form>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">عد إلى الأعلى</a></p>
+        <p>
+          &copy; 2017–2026 Company, Inc. &middot;
+          <a href="#">سياسة الخصوصية</a> &middot; <a href="#">شروط الاستخدام</a>
+        </p>
+      </footer>
+    </main>
+    <script
+      src="assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+  </body>
+</html>
